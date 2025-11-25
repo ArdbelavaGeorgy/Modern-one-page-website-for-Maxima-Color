@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#E87C31" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Maxima Color" />
+    <meta name="msapplication-TileColor" content="#E87C31" />
+    <meta name="msapplication-config" content="none" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="images/Logo.svg" as="image" />
+    <link rel="preload" href="images/paint.png" as="image" />
+    <link rel="preload" href="Styles.css" as="style" />
+
+    <title>Maxima Color - Инновационная краска для любых поверхностей</title>
+    <meta
+      name="description"
+      content="Профессиональная резиновая краска Maxima для офисов, паркингов, торговых центров и других помещений. Высокое качество, долговечность, экологичность."
+    />
+
+    <link rel="stylesheet" href="Styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+      type="text/javascript"
+      defer
+    ></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/Logo.svg" />
+    <link rel="apple-touch-icon" href="images/Logo.svg" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-section">
+          <a href="#" class="logo-link">
+            <img src="images/Logo.svg" alt="Maxima" />
+          </a>
+          <div class="logo-text">
+            <span>Безупречное качество</span>
+          </div>
+        </div>
+        <div class="header-nav">
+          <nav class="nav-menu">
+            <a href="#tasks" class="nav-link">Задачи</a>
+            <a href="#surfaces" class="nav-link">Поверхности</a>
+            <a href="#palette" class="nav-link">Палитра</a>
+            <a href="#prices" class="nav-link">Цены</a>
+            <a href="#delivery" class="nav-link">Доставка</a>
+            <a href="#info" class="nav-link">Информация</a>
+          </nav>
+        </div>
+        <div class="contact-section">
+          <div class="contact-item">
+            <i class="fas fa-phone icon-link"></i>
+            <a href="tel:84959215739" class="phone-link">8-495-921-57-39</a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-whatsapp icon-link"></i>
+            <a href="tel:89104292250" class="phone-link">8-910-429-22-50</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope icon-link"></i>
+            <a href="mailto:maximacolor@mail.ru" class="email-link"
+              >maximacolor@mail.ru</a
+            >
+          </div>
+        </div>
+        <button
+          class="menu-toggle"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <nav class="mobile-nav" aria-label="Мобильная навигация">
+      <div class="mobile-nav-header">
+        <div class="mobile-logo">
+          <img src="images/Logo.svg" alt="Maxima" />
+          <span>Maxima Color</span>
+        </div>
+        <button class="mobile-close" aria-label="Закрыть меню">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="mobile-menu">
+        <li><a href="#tasks">Задачи</a></li>
+        <li><a href="#surfaces">Поверхности</a></li>
+        <li><a href="#palette">Палитра</a></li>
+        <li><a href="#prices">Цены</a></li>
+        <li><a href="#delivery">Доставка</a></li>
+        <li><a href="#info">Информация</a></li>
+      </ul>
+      <div class="mobile-contacts">
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="tel:84959215739">8-495-921-57-39</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <a href="tel:89104292250">8-910-429-22-50</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:maximacolor@mail.ru">maximacolor@mail.ru</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Оверлей для мобильного меню -->
+    <div class="mobile-overlay"></div>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-parallax">
+          <div class="parallax-layer parallax-bg"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Инновационная краска</h1>
+            <h2>для любых повехностей</h2>
+          </div>
+          <div class="paint-cans">
+            <img src="images/paint.png" alt="Maxima резиновая краска" />
+          </div>
+        </div>
+      </section>
+
+      <section id="tasks" class="tasks-section section-parallax">
+        <div class="parallax-bg"></div>
+        <div class="container">
+          <h2 class="section-title">Под любые задачи</h2>
+          <div class="tasks-grid">
+            <div class="task-item">
+              <div class="task-image">
+                <img src="images/office.jpg" alt="Офисные помещения" />
+              </div>
+              <div class="paint-overlay"></div>
+              <div class="task-content">
+                <h3>Офисные помещения</h3>
+                <p>
+                  Надежная защита и эстетичный внешний вид для офисных
+                  пространств. Резиновая краска Maxima создаст комфортную
+                  рабочую среду на долгие годы.
+                </p>
+              </div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-image">
+                <img src="images/parking.jpg" alt="Паркинги" />
+              </div>
+              <div class="paint-overlay"></div>
+              <div class="task-content">
+                <h3>Паркинги</h3>
+                <p>
+                  Долговечная защита и достойный внешний вид для парковочных
+                  пространств. Maxima выдержит интенсивную эксплуатацию и
+                  защитит от разрушения.
+                </p>
+              </div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-image">
+                <img src="images/hangar.jpg" alt="Ангары" />
+              </div>
+              <div class="paint-overlay"></div>
+              <div class="task-content">
+                <h3>Ангары</h3>
+                <p>
+                  Надежная защита для промышленных сооружений. Устойчивость к
+                  атмосферным воздействиям и длительный срок службы.
+                </p>
+              </div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-image">
+                <img src="images/facade.jpg" alt="Фасады" />
+              </div>
+              <div class="paint-overlay"></div>
+              <div class="task-content">
+                <h3>Фасады</h3>
+                <p>
+                  Широкая палитра цветов для создания уникального облика вашего
+                  дома. Защита и красота на долгие годы.
+                </p>
+              </div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-image">
+                <img src="images/roof.jpg" alt="Крыши" />
+              </div>
+              <div class="paint-overlay"></div>
+              <div class="task-content">
+                <h3>Крыши</h3>
+                <p>
+                  Надежная защита от атмосферных осадков, холода и жары.
+                  Резиновая краска Maxima продлит срок службы любого кровельного
+                  материала.
+                </p>
+              </div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-image">
+                <img src="images/fence.jpg" alt="Заборы" />
+              </div>
+              <div class="paint-overlay"></div>
+              <div class="task-content">
+                <h3>Заборы</h3>
+                <p>
+                  Долговечная защита и достойный внешний вид для ограждений
+                  любого типа. Maxima предохранит конструкции от разрушения.
+                </p>
+              </div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-image">
+                <img src="images/communications.jpeg" alt="Коммуникации" />
+              </div>
+              <div class="paint-overlay"></div>
+              <div class="task-content">
+                <h3>Коммуникации</h3>
+                <p>
+                  Защита труб, кабель-каналов и инженерных систем от коррозии и
+                  внешних воздействий. Надежное покрытие для любых коммуникаций.
+                </p>
+              </div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-image">
+                <img
+                  src="images/metal-constructions.jpeg"
+                  alt="Металло-конструкции"
+                />
+              </div>
+              <div class="paint-overlay"></div>
+              <div class="task-content">
+                <h3>Металло-конструкции</h3>
+                <p>
+                  Долговечная защита металлических конструкций от ржавчины и
+                  разрушения. Идеально для промышленных и частных объектов.
+                </p>
+              </div>
+            </div>
+
+            <div class="task-item">
+              <div class="task-image">
+                <img src="images/stairways.jpg" alt="Лестничные проемы" />
+              </div>
+              <div class="paint-overlay"></div>
+              <div class="task-content">
+                <h3>Лестничные проемы</h3>
+                <p>
+                  Эстетика и безопасность для лестничных маршей и площадок.
+                  Прочное покрытие, устойчивое к истиранию и механическим
+                  нагрузкам.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="surfaces" class="surfaces-section section-parallax">
+        <div class="parallax-bg"></div>
+        <div class="container">
+          <h2 class="section-title">Для любых поверхностей</h2>
+          <div class="surfaces-grid new-surfaces-grid">
+            <div class="surface-static-card" data-surface="mineral">
+              <img src="images/mineral.jpeg" alt="Минеральные поверхности" />
+              <div class="surface-static-title">Минеральные поверхности</div>
+            </div>
+            <div class="surface-static-card" data-surface="wood">
+              <img src="images/wood.jpg" alt="Дерево" />
+              <div class="surface-static-title">Дерево</div>
+            </div>
+            <div class="surface-static-card" data-surface="metal">
+              <img src="images/metal.jpeg" alt="Металл" />
+              <div class="surface-static-title">Металл</div>
+            </div>
+            <div class="surface-static-card" data-surface="plastic">
+              <img src="images/plastic.jpeg" alt="Пластик, лепнина" />
+              <div class="surface-static-title">Пластик, лепнина</div>
+            </div>
+          </div>
+
+          <div class="surface-descriptions">
+            <div class="surface-desc desc-mineral" id="desc-mineral">
+              <div class="surface-desc-flex">
+                <div class="surface-desc-text">
+                  <h3>Минеральные поверхности</h3>
+                  <ul class="desc-list">
+                    <li>Бетон, пенобетон</li>
+                    <li>Арболит, газосиликат</li>
+                    <li>Стекломагнезит</li>
+                    <li>Все виды обоев</li>
+                    <li>Кирпич</li>
+                    <li>Шифер, ондулин</li>
+                    <li>Гипс, гипсокартон</li>
+                    <li>Камень</li>
+                  </ul>
+                  <p>
+                    Эластичность Резиновой краски Maxima предотвращает появление
+                    микротрещин на штукатурке, а универсальная и хорошая адгезия
+                    обеспечивает надежную защиту любой минеральной поверхности
+                    от разрушения.<br />Паропроницаемость покрытия позволяет
+                    поверхности "дышать". Срок службы лакокрасочного покрытия до
+                    15 и более лет.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="surface-desc desc-wood" id="desc-wood">
+              <div class="surface-desc-flex">
+                <div class="surface-desc-text">
+                  <h3>Дерево</h3>
+                  <ul class="desc-list">
+                    <li>Вагонка</li>
+                    <li>Бревно</li>
+                    <li>ДСП, ДВП</li>
+                    <li>Брус</li>
+                    <li>ОСБ-OSB</li>
+                    <li>Фанера</li>
+                  </ul>
+                  <p>
+                    Дерево – "живой" материал, впитывает влагу и набухает при
+                    высокой влажности, сжимается при высыхании.<br />Эластичная
+                    Резиновая краска Maxima растягивается и сжимается вместе с
+                    окрашенной деревянной поверхностью: не растрескивается и не
+                    шелушится при любых погодных условиях.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="surface-desc desc-metal" id="desc-metal">
+              <div class="surface-desc-flex">
+                <div class="surface-desc-text">
+                  <h3>Металл</h3>
+                  <ul class="desc-list">
+                    <li>Оцинковка</li>
+                    <li>Алюминий</li>
+                    <li>Чёрный металл</li>
+                    <li>Нержавейка</li>
+                    <li>Металлочерепица</li>
+                    <li>Цветной металл</li>
+                  </ul>
+                  <p>
+                    Не всякая краска ляжет, а тем более долго продержится на
+                    оцинковке или металлочерепице.<br />Резиновая краска Super
+                    Decor благодаря своему уникальному составу и свойствам
+                    обладает Супер адгезией к большинству цветных и чёрных
+                    металлам.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="surface-desc desc-plastic" id="desc-plastic">
+              <div class="surface-desc-flex">
+                <div class="surface-desc-text">
+                  <h3>Пластик, лепнина</h3>
+                  <ul class="desc-list">
+                    <li>Пенопласт</li>
+                    <li>Изолон</li>
+                    <li>Полиуретан</li>
+                    <li>Резина</li>
+                    <li>Полипропилен</li>
+                    <li>Полистирол</li>
+                    <li>Пластмасса</li>
+                  </ul>
+                  <p>
+                    Разнообразие строительных материалов по своему составу и
+                    свойствам требует для их окраски широкий спектр
+                    лакокрасочных материалов.<br />Универсальность Резиновой
+                    краски Maxima гарантирует прекрасную адгезию ко всем
+                    строительным и отделочным материалам и справится с любой
+                    сложной задачей.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="palette" class="palette-section">
+        <div class="container">
+          <h2 class="section-title">Коллекция Maxima</h2>
+          <p>базовые цвета нашей резиновой краски</p>
+
+          <!-- Добавляем информацию о коллировке -->
+          <div class="color-systems-info">
+            <div class="color-systems-badge">
+              <i class="fas fa-palette"></i>
+              <span>Коллируем более 10000 цветов</span>
+            </div>
+            <div class="color-systems-list">
+              <span class="system-item">RAL</span>
+              <span class="system-item">Tikkurila</span>
+              <span class="system-item">Dulux</span>
+              <span class="system-item">NCS</span>
+              <span class="system-item">Caparol</span>
+            </div>
+          </div>
+
+          <div class="color-collection">
+            <h3>Цветовая палитра</h3>
+
+            <div class="color-palette">
+              <div class="nav-arrow left-arrow">
+                <i class="fas fa-chevron-left"></i>
+              </div>
+
+              <div class="color-strip">
+                <!-- Цветовые блоки будут добавлены динамически -->
+              </div>
+
+              <div class="nav-arrow right-arrow">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+
+            <div class="color-details">
+              <div class="color-preview"></div>
+              <div class="details-content">
+                <h2 class="color-name"></h2>
+                <div class="color-code-container">
+                  <code id="color-code"></code>
+                  <button class="copy-btn">
+                    <i class="far fa-copy"></i> Копировать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Прайс-блок -->
+      <section id="prices" class="custom-prices-section">
+        <h2 class="custom-prices-title">Цены:</h2>
+        <!-- Краска -->
+        <div class="custom-prices-row">
+          <div class="custom-price-item">
+            <div class="custom-price-img-wrap">
+              <img
+                src="images/ColorMaxima.png"
+                alt="Maxima 1 кг"
+                class="size-1kg"
+              />
+              <span class="custom-price-weight">1 КГ</span>
+            </div>
+            <div class="custom-price-value">545 руб.</div>
+          </div>
+          <div class="custom-price-item">
+            <div class="custom-price-img-wrap">
+              <img
+                src="images/ColorMaxima.png"
+                alt="Maxima 2.5 кг"
+                class="size-2_5kg"
+              />
+              <span class="custom-price-weight">2.5 КГ</span>
+            </div>
+            <div class="custom-price-value">1 073 руб.</div>
+          </div>
+          <div class="custom-price-item">
+            <div class="custom-price-img-wrap">
+              <img
+                src="images/ColorMaxima.png"
+                alt="Maxima 11 кг"
+                class="size-11kg"
+              />
+              <span class="custom-price-weight">11 КГ</span>
+            </div>
+            <div class="custom-price-value">4 352 руб.</div>
+          </div>
+          <div class="custom-price-item">
+            <div class="custom-price-img-wrap">
+              <img
+                src="images/ColorMaxima.png"
+                alt="Maxima 40 кг"
+                class="size-40kg"
+              />
+              <span class="custom-price-weight">40 КГ</span>
+            </div>
+            <div class="custom-price-value">15 662 руб.</div>
+          </div>
+        </div>
+        <!-- Грунт -->
+        <div class="custom-prices-row">
+          <div class="custom-price-item">
+            <div class="custom-price-img-wrap">
+              <img
+                src="images/GruntMaxima.png"
+                alt="Грунт 1 кг"
+                class="size-1kg"
+              />
+              <span class="custom-price-weight">1 КГ</span>
+            </div>
+            <div class="custom-price-value">144 руб.</div>
+          </div>
+          <div class="custom-price-item">
+            <div class="custom-price-img-wrap">
+              <img
+                src="images/GruntMaxima.png"
+                alt="Грунт 5 кг"
+                class="size-5kg"
+              />
+              <span class="custom-price-weight">5 КГ</span>
+            </div>
+            <div class="custom-price-value">545 руб.</div>
+          </div>
+          <div class="custom-price-item">
+            <div class="custom-price-img-wrap">
+              <img
+                src="images/GruntMaxima.png"
+                alt="Грунт 10 кг"
+                class="size-10kg"
+              />
+              <span class="custom-price-weight">10 КГ</span>
+            </div>
+            <div class="custom-price-value">980 руб.</div>
+          </div>
+          <div class="custom-price-item">
+            <div class="custom-price-img-wrap">
+              <img
+                src="images/GruntMaxima.png"
+                alt="Грунт 30 кг"
+                class="size-30kg"
+              />
+              <span class="custom-price-weight">30 КГ</span>
+            </div>
+            <div class="custom-price-value">2 730 руб.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- /Прайс-блок -->
+
+      <section id="delivery" class="delivery-section">
+        <div class="container">
+          <h2 class="section-title">Доставка</h2>
+
+          <div class="delivery-slider">
+            <div class="slider-container">
+              <div class="slider-track">
+                <div class="slide">
+                  <div class="slide-image">
+                    <img src="images/dostavka_1.png" alt="Быстрая доставка" />
+                  </div>
+                  <div class="slide-content">
+                    <h3>Быстрая доставка</h3>
+                    <p>
+                      Осуществляем оперативную доставку по всей России. Ваш
+                      заказ будет доставлен в кратчайшие сроки благодаря
+                      отлаженной логистической системе.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="slide-image">
+                    <img src="images/dostavka_2.png" alt="Надежная упаковка" />
+                  </div>
+                  <div class="slide-content">
+                    <h3>Надежная упаковка</h3>
+                    <p>
+                      Используем специальную упаковку, которая надежно защищает
+                      товар при транспортировке. Каждая банка краски
+                      доставляется в целости и сохранности.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="slide-image">
+                    <img src="images/dostavka_3.jpg" alt="Контроль качества" />
+                  </div>
+                  <div class="slide-content">
+                    <h3>Контроль качества</h3>
+                    <p>
+                      Тщательно следим за состоянием товара на всех этапах
+                      доставки. Проводим многоступенчатый контроль качества
+                      перед отправкой.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="slider-arrow slider-prev">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="slider-arrow slider-next">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+
+              <div class="slider-dots">
+                <button class="dot active" data-index="0"></button>
+                <button class="dot" data-index="1"></button>
+                <button class="dot" data-index="2"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="blog-section section-parallax">
+        <div class="parallax-bg"></div>
+        <div class="container">
+          <h2 class="section-title">Блог</h2>
+          <div class="blog-grid">
+            <!-- Карточка блога 1 -->
+            <article class="blog-card">
+              <div class="blog-image">
+                <img src="images/Painter1.jpg" alt="Как выбрать краску" />
+              </div>
+              <div class="blog-content">
+                <span class="blog-category">Советы</span>
+                <h3 class="blog-title">
+                  Как правильно выбрать краску для фасада
+                </h3>
+                <p class="blog-excerpt">
+                  Узнайте основные критерии выбора фасадной краски для
+                  долговечной и качественной отделки вашего дома.
+                </p>
+                <div class="blog-footer">
+                  <span class="blog-date">15 марта 2024</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка блога 2 -->
+            <article class="blog-card">
+              <div class="blog-image">
+                <img src="images/Painter.jpg" alt="Подготовка поверхности" />
+              </div>
+              <div class="blog-content">
+                <span class="blog-category">Инструкция</span>
+                <h3 class="blog-title">
+                  Подготовка поверхности перед покраской
+                </h3>
+                <p class="blog-excerpt">
+                  Пошаговое руководство по правильной подготовке поверхности для
+                  достижения идеального результата.
+                </p>
+                <div class="blog-footer">
+                  <span class="blog-date">10 марта 2024</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка блога 3 -->
+            <article class="blog-card">
+              <div class="blog-image">
+                <img src="images/Painter2.jpg" alt="Новые технологии" />
+              </div>
+              <div class="blog-content">
+                <span class="blog-category">Новости</span>
+                <h3 class="blog-title">Инновации в производстве красок</h3>
+                <p class="blog-excerpt">
+                  Обзор современных технологий и инноваций в производстве
+                  лакокрасочных материалов.
+                </p>
+                <div class="blog-footer">
+                  <span class="blog-date">5 марта 2024</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Модальное окно для блога -->
+          <div id="blog-modal" class="blog-modal">
+            <div class="blog-modal-content">
+              <span class="blog-modal-close">&times;</span>
+              <div class="blog-modal-body">
+                <!-- Сюда будет подставляться содержимое блога -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-section" id="info">
+        <div class="container">
+          <h2 class="section-title">Информация</h2>
+          <div class="info-tabs">
+            <button class="info-tab active" data-tab="certificates">
+              Сертификаты
+            </button>
+            <button class="info-tab" data-tab="description">Описание</button>
+          </div>
+          <div class="info-content">
+            <div class="info-block" id="certificates">
+              <h3 class="info-title">Наши сертификаты</h3>
+              <p class="info-subtitle">
+                Официальные документы, подтверждающие качество нашей продукции
+              </p>
+              <div class="certificates-simple-grid">
+                <div class="certificate-simple-item">
+                  <a href="pdf/pozharnyj-sertifikat-maxima.pdf" target="_blank">
+                    <img
+                      src="images/Sert2.png"
+                      alt="Пожарный сертификат MAXIMA"
+                    />
+                  </a>
+                  <div class="certificate-simple-caption">
+                    Пожарный сертификат<br />MAXIMA
+                  </div>
+                </div>
+                <div class="certificate-simple-item">
+                  <a href="pdf/sgr-maxima-1.pdf" target="_blank">
+                    <img src="images/Sert3.png" alt="СГР MAXIMA" />
+                  </a>
+                  <div class="certificate-simple-caption">СГР<br />MAXIMA</div>
+                </div>
+                <div class="certificate-simple-item">
+                  <a href="pdf/sgr-maxima-2.pdf" target="_blank">
+                    <img src="images/Sert1.png" alt="СГР MAXIMA" />
+                  </a>
+                  <div class="certificate-simple-caption">СГР<br />MAXIMA</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-block" id="description" style="display: none">
+              <h3 class="info-title">Инструкции по применению</h3>
+              <p class="info-subtitle">
+                Подробные руководства по использованию нашей продукции
+              </p>
+              <div class="certificates-simple-grid">
+                <div class="certificate-simple-item">
+                  <a href="pdf/OpisanieKraska.pdf" target="_blank">
+                    <img
+                      src="images/OpisanieKraska.png"
+                      alt="Инструкция по применению краски"
+                    />
+                  </a>
+                  <div class="certificate-simple-caption">
+                    Инструкция по применению<br />краски
+                  </div>
+                </div>
+                <div class="certificate-simple-item">
+                  <a href="pdf/OpisanieGrunta.pdf" target="_blank">
+                    <img
+                      src="images/OpisanieGrunta.png"
+                      alt="Инструкция по применению грунта"
+                    />
+                  </a>
+                  <div class="certificate-simple-caption">
+                    Инструкция по применению<br />грунта
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col contact-us">
+            <h3>Контакты</h3>
+            <div class="contact-prompt">Нужна консультация? Вопросы?</div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-text">
+                <a href="tel:84959215739">+7 (495) 921-57-39</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-text">
+                <a href="tel:89104292250">8-910-429-22-50</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-text">
+                <a href="mailto:maximacolor@mail.ru">maximacolor@mail.ru</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                МО, город Химки, Вашутинское шоссе дом 18
+              </div>
+            </div>
+
+            <div class="working-hours">
+              <div class="working-hours-title">Режим работы:</div>
+              <div class="working-hours-text">
+                понедельник-суббота с 9-00 до 18-00
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Навигация</h3>
+            <ul class="footer-menu">
+              <li><a href="#tasks">Задачи</a></li>
+              <li><a href="#surfaces">Поверхности</a></li>
+              <li><a href="#palette">Палитра</a></li>
+              <li><a href="#prices">Цены</a></li>
+              <li><a href="#delivery">Доставка</a></li>
+              <li><a href="#info">Информация</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Мы на карте</h3>
+            <div class="footer-map">
+              <div
+                id="map"
+                style="width: 100%; height: 300px; border-radius: 15px"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">© 2024 Maxima Color. Все права защищены.</div>
+          <div class="social-media">
+            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Yandex Maps initialization
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map("map", {
+          center: [55.897736, 37.443121], // Химки, Вашутинское шоссе
+          zoom: 15,
+        });
+
+        var myPlacemark = new ymaps.Placemark(
+          [55.897736, 37.443121],
+          {
+            hintContent: "Maxima Color",
+            balloonContent:
+              "Maxima Color - МО, город Химки, Вашутинское шоссе дом 18",
+          },
+          {
+            preset: "islands#orangeDotIcon",
+          }
+        );
+
+        myMap.geoObjects.add(myPlacemark);
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
